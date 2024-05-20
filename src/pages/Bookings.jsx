@@ -1,0 +1,22 @@
+// eslint-disable-next-line no-unused-vars
+import React from "react";
+
+import Heading from "../ui/Heading";
+import Row from "../ui/Row";
+import BookingTable from "../features/booking/BookingTable";
+import BookingTableOperations from "../features/booking/BookingTableOperations";
+
+function Bookings() {
+  return (
+    <>
+      <Row type="horizontal">
+        <Heading as="h1">All bookings</Heading>
+        <BookingTableOperations />
+      </Row>
+
+      <BookingTable />
+    </>
+  );
+}
+
+export default Bookings;
