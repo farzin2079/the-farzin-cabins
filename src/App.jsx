@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
@@ -22,6 +22,7 @@ import ProtectedRoute from "./ui/ProtectedRoute";
 import GlobalStyles from "./styles/GlobalStyles";
 import { DarkModeProvider } from "./context/DarkModeContext";
 import CreateBooking from "./pages/CreateBooking";
+import UploadBookings from "./data/UploadBookings";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -33,6 +34,7 @@ const queryClient = new QueryClient({
 });
 
 export default function App() {
+
   return (
     <DarkModeProvider>
       <QueryClientProvider client={queryClient}>

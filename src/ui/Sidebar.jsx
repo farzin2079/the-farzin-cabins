@@ -21,6 +21,8 @@ export default function Sidebar() {
     <StyleSidebar>
       <Logo />
       <MainNav />
+
+      <Uploader />
     </StyleSidebar>
   );
 }
